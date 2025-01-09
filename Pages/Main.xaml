@@ -5,10 +5,86 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:zdvokzal.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="Main">
+       d:DesignHeight="700" d:DesignWidth="810" MaxHeight="720" MaxWidth="820"
+  Title="">
 
-    <Grid>
-        
+    <Grid Background="Gray">
+        <Grid.Resources>
+            <ResourceDictionary Source="/Resource/BtnRes.xaml"/>
+        </Grid.Resources>
+        <Grid Margin="0,0,0,0" VerticalAlignment="Top" Height="60">
+            <Grid.Effect>
+                <DropShadowEffect BlurRadius="31" Direction="260" Color="#FFC1C1C1" ShadowDepth="0"/>
+            </Grid.Effect>
+            <Border CornerRadius="0,0,10,10" Margin="0,0,0,0">
+                <Border.Background>
+                    <SolidColorBrush Color="Purple" Opacity="1.0"/>
+                </Border.Background>
+            </Border>
+            <Image x:Name="img" Source="/Image/logo.png" Margin="20,0,0,0" HorizontalAlignment="Left" Width="45" Height="44" VerticalAlignment="Center" />
+            <Label Content="ЗВЕЗДНЫЙ ШАПИТО" Foreground="White" FontWeight="Bold" FontSize="25" Margin="80,0,450,0" VerticalAlignment="Center" HorizontalContentAlignment="Left" />
+            <Grid Width="300" Margin="300,0,0,0">
+                <TextBox Style="{StaticResource BaseBox}" TextChanged="Text_Changed" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" x:Name="tb_search" Background="Purple" Margin="0,0,0,0" VerticalAlignment="Center" Height="40" HorizontalAlignment="Center" Width="300" VerticalContentAlignment="Center"/>
+                <Image HorizontalAlignment="Right" Margin="0,0,5,0" Source="/Image/Lupa.png" Width="20" Height="20"/>
+            </Grid>
+        </Grid>
+        <Grid Margin="0,77,0,0" Height="51" VerticalAlignment="Top">
+            <StackPanel x:Name="list_move" Orientation="Horizontal">
+                <Border x:Name="Predstavleniya" Margin="7,3,0,0" Height="45" CornerRadius="5,5,5,5" Padding="7,7,7,7" Style="{StaticResource Grid Itm_Anim}" MouseDown="Click_tickets" Background="Purple">
+                    <Grid Height="30">
+                        <Image Source="/Image/tickets.png" Margin="5,0,0,0" HorizontalAlignment="Left" Width="29" Height="30" VerticalAlignment="Top"/>
+                        <Label x:Name="people_text" Content="Представления" Margin="44,0,0,0" Foreground="White" FontWeight="Bold" FontSize="15" FontFamily="Corbel" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Height="30" VerticalAlignment="Top"/>
+                    </Grid>
+                </Border>
+                <Border x:Name="Programma" Margin="5,3,0,0" Height="45" Padding="7,7,7,7" CornerRadius="5,5,5,5" Style="{StaticResource Grid Itm_Anim}" MouseDown="Click_programma" Background="Purple">
+                    <Grid Height="30">
+                        <Image Source="/Image/circus.png" Margin="5,0,0,0" HorizontalAlignment="Left" Width="29" Height="30" VerticalAlignment="Top" />
+                        <Label Content="Программа" Margin="44,0,0,0" Foreground="White" FontWeight="Bold" FontSize="15" FontFamily="Corbel" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Height="30" VerticalAlignment="Top"/>
+                    </Grid>
+                </Border>
+                <Border x:Name="Rabotniki" Margin="5,3,0,0" Height="45" Padding="7,7,7,7" CornerRadius="5,5,5,5" Style="{StaticResource Grid Itm_Anim}" MouseDown="Click_rabotniki" Background="Purple">
+                    <Grid Height="30">
+                        <Image Source="/Image/rab.png" Margin="5,0,0,0" HorizontalAlignment="Left" Width="29" Height="30" VerticalAlignment="Top"/>
+                        <Label Content="Работники" Margin="44,0,0,0" Foreground="White" FontWeight="Bold" FontSize="15" FontFamily="Corbel" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Height="30" VerticalAlignment="Top" />
+                    </Grid>
+                </Border>
+                <Border x:Name="Truppa" Margin="5,3,0,0" Height="45" Padding="7,7,7,7" CornerRadius="5,5,5,5" Style="{StaticResource Grid Itm_Anim}" MouseDown="Click_truppa" Background="Purple">
+                    <Grid Height="30">
+                        <Image Source="/Image/face.png" Margin="5,0,0,0" HorizontalAlignment="Left" Width="29" Height="30" VerticalAlignment="Top" />
+                        <Label Content="Труппа" Margin="44,0,0,0" Foreground="White" FontWeight="Bold" FontSize="15" FontFamily="Corbel" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Height="30" VerticalAlignment="Top" />
+                    </Grid>
+                </Border>
+                <Border x:Name="Raspisanie" Margin="5,3,0,0" Height="45" Padding="7,7,7,7" CornerRadius="5,5,5,5" Style="{StaticResource Grid Itm_Anim}" MouseDown="Click_raspisanie" Background="Purple">
+                    <Grid Height="30">
+                        <Image Source="/Image/calendar.png" Margin="5,0,0,0" HorizontalAlignment="Left" Width="29" Height="30" VerticalAlignment="Top" />
+                        <Label Content="Расписание" Margin="44,0,0,0" Foreground="White" FontWeight="Bold" FontSize="15" FontFamily="Corbel" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Height="30" VerticalAlignment="Top" />
+                    </Grid>
+                </Border>
+                <Border x:Name="Excel" Margin="5,3,0,0" Height="45" Padding="7,7,7,7" CornerRadius="5,5,5,5" Style="{StaticResource Grid Itm_Anim}" MouseDown="Click_Export" Background="Purple">
+                    <Grid Height="30">
+                        <Image Source="/Image/Excel.png" HorizontalAlignment="Left" Width="29" Height="30" VerticalAlignment="Top" />
+                    </Grid>
+                </Border>
+            </StackPanel>
+        </Grid>
+        <Border Margin="10,133,10,50" CornerRadius="10,10,10,10">
+            <Grid MinHeight="300">
+                <ScrollViewer x:Name="scroll_main" Background="Gray">
+                    <StackPanel x:Name="parent">
+                    </StackPanel>
+                </ScrollViewer>
+                <Frame x:Name="frame_main" NavigationUIVisibility="Hidden" Visibility="Hidden" Opacity="0"/>
+            </Grid>
+        </Border>
+        <Button x:Name="btn_up" Background="Purple"  Click="Click_Up" Style="{StaticResource BtnRedac}" Margin="0,0,95,5" VerticalAlignment="Bottom" Height="40" HorizontalAlignment="Right" Width="40">
+            <Image Source="/Image/Up.png" Width="30" Height="30"/>
+        </Button>
+        <Button x:Name="btn_down" Background="Purple" Click="Click_Down" Style="{StaticResource BtnRedac}" Margin="0,0,50,5" VerticalAlignment="Bottom" Height="40" HorizontalAlignment="Right" Width="40">
+            <Image Source="/Image/Down.png" Width="30" Height="30"/>
+        </Button>
+        <Button x:Name="btn_cancel" Background="Purple" Click="Click_back" Style="{StaticResource BtnRedac}" Margin="0,10,10,0" VerticalAlignment="Top" Height="40"
+    HorizontalAlignment="Right" Width="40">
+            <Image Source="/Image/back.png" Width="30" Height="30"/>
+        </Button>
     </Grid>
 </Page>
