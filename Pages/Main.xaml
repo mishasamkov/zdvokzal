@@ -22,9 +22,9 @@
                 </Border.Background>
             </Border>
             <Image x:Name="img" Source="/Image/logo.png" Margin="20,0,0,0" HorizontalAlignment="Left" Width="45" Height="44" VerticalAlignment="Center" />
-            <Label Content="ЗВЕЗДНЫЙ ШАПИТО" Foreground="White" FontWeight="Bold" FontSize="25" Margin="80,0,450,0" VerticalAlignment="Center" HorizontalContentAlignment="Left" />
+            <Label Content="Железнодорожный вокзал" Foreground="White" FontWeight="Bold" FontSize="25" Margin="80,0,373,0" VerticalAlignment="Center" HorizontalContentAlignment="Left" />
             <Grid Width="300" Margin="300,0,0,0">
-                <TextBox Style="{StaticResource BaseBox}" TextChanged="Text_Changed" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" x:Name="tb_search" Background="Purple" Margin="0,0,0,0" VerticalAlignment="Center" Height="40" HorizontalAlignment="Center" Width="300" VerticalContentAlignment="Center"/>
+                <TextBox Style="{StaticResource BaseBox}" TextChanged="Text_Changed" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" x:Name="tb_search" Background="Purple" VerticalAlignment="Center" Height="40" HorizontalAlignment="Center" Width="214" VerticalContentAlignment="Center"/>
                 <Image HorizontalAlignment="Right" Margin="0,0,5,0" Source="/Image/Lupa.png" Width="20" Height="20"/>
             </Grid>
         </Grid>
@@ -32,14 +32,14 @@
             <StackPanel x:Name="list_move" Orientation="Horizontal">
                 <Border x:Name="Predstavleniya" Margin="7,3,0,0" Height="45" CornerRadius="5,5,5,5" Padding="7,7,7,7" Style="{StaticResource Grid Itm_Anim}" MouseDown="Click_tickets" Background="Purple">
                     <Grid Height="30">
-                        <Image Source="/Image/tickets.png" Margin="5,0,0,0" HorizontalAlignment="Left" Width="29" Height="30" VerticalAlignment="Top"/>
-                        <Label x:Name="people_text" Content="Представления" Margin="44,0,0,0" Foreground="White" FontWeight="Bold" FontSize="15" FontFamily="Corbel" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Height="30" VerticalAlignment="Top"/>
+                        <Image Source="/Image/poezdd.png" Margin="5,0,0,0" HorizontalAlignment="Left" Width="29" Height="30" VerticalAlignment="Top"/>
+                        <Label x:Name="people_text" Content="Поезда" Margin="44,0,0,0" Foreground="White" FontWeight="Bold" FontSize="15" FontFamily="Corbel" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Height="30" VerticalAlignment="Top"/>
                     </Grid>
                 </Border>
                 <Border x:Name="Programma" Margin="5,3,0,0" Height="45" Padding="7,7,7,7" CornerRadius="5,5,5,5" Style="{StaticResource Grid Itm_Anim}" MouseDown="Click_programma" Background="Purple">
                     <Grid Height="30">
-                        <Image Source="/Image/circus.png" Margin="5,0,0,0" HorizontalAlignment="Left" Width="29" Height="30" VerticalAlignment="Top" />
-                        <Label Content="Программа" Margin="44,0,0,0" Foreground="White" FontWeight="Bold" FontSize="15" FontFamily="Corbel" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Height="30" VerticalAlignment="Top"/>
+                        <Image Source="/Image/poezd.png" Margin="5,7,0,0" HorizontalAlignment="Left" Width="29" Height="23" VerticalAlignment="Top" />
+                        <Label Content="Движения поездов" Margin="44,0,0,0" Foreground="White" FontWeight="Bold" FontSize="15" FontFamily="Corbel" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Height="30" VerticalAlignment="Top"/>
                     </Grid>
                 </Border>
                 <Border x:Name="Rabotniki" Margin="5,3,0,0" Height="45" Padding="7,7,7,7" CornerRadius="5,5,5,5" Style="{StaticResource Grid Itm_Anim}" MouseDown="Click_rabotniki" Background="Purple">
@@ -50,8 +50,8 @@
                 </Border>
                 <Border x:Name="Truppa" Margin="5,3,0,0" Height="45" Padding="7,7,7,7" CornerRadius="5,5,5,5" Style="{StaticResource Grid Itm_Anim}" MouseDown="Click_truppa" Background="Purple">
                     <Grid Height="30">
-                        <Image Source="/Image/face.png" Margin="5,0,0,0" HorizontalAlignment="Left" Width="29" Height="30" VerticalAlignment="Top" />
-                        <Label Content="Труппа" Margin="44,0,0,0" Foreground="White" FontWeight="Bold" FontSize="15" FontFamily="Corbel" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Height="30" VerticalAlignment="Top" />
+                        <Image Source="/Image/brigada.png" Margin="5,9,0,0" HorizontalAlignment="Left" Width="29" Height="21" VerticalAlignment="Top" />
+                        <Label Content="Бригада поездов" Margin="44,0,0,0" Foreground="White" FontWeight="Bold" FontSize="15" FontFamily="Corbel" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Height="30" VerticalAlignment="Top" />
                     </Grid>
                 </Border>
                 <Border x:Name="Raspisanie" Margin="5,3,0,0" Height="45" Padding="7,7,7,7" CornerRadius="5,5,5,5" Style="{StaticResource Grid Itm_Anim}" MouseDown="Click_raspisanie" Background="Purple">
