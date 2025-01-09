@@ -55,6 +55,30 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Elements\Add_itm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Elements\predstavleniya_itm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Elements\programma_itm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Elements\rab_itm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Elements\raspisanie_itm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Elements\truppa_itm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -62,6 +86,24 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Elements\Add_itm.xaml.cs">
+      <DependentUpon>Add_itm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\predstavleniya_itm.xaml.cs">
+      <DependentUpon>predstavleniya_itm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\programma_itm.xaml.cs">
+      <DependentUpon>programma_itm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\rab_itm.xaml.cs">
+      <DependentUpon>rab_itm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\raspisanie_itm.xaml.cs">
+      <DependentUpon>raspisanie_itm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\truppa_itm.xaml.cs">
+      <DependentUpon>truppa_itm.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -127,7 +169,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Elements\" />
     <Folder Include="Pages\PagesUser\" />
   </ItemGroup>
   <ItemGroup>
@@ -161,6 +202,11 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Image\poezdd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\face.png" />
+    <Resource Include="Image\people.png" />
+    <Resource Include="Image\plus.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="zdvokzal.Elements.predstavleniya_itm"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:zdvokzal.Elements"
+                     mc:Ignorable="d">
+
+    <Border x:Name="border" Opacity="1" Margin="0,5,0,0" CornerRadius="5,5,5,5" Background="Gray" BorderBrush="Purple" BorderThickness="2">
+        <Grid Width="750">
+            <Grid.Resources>
+                <ResourceDictionary Source="/Resource/BtnRes.xaml"/>
+            </Grid.Resources>
+            <Label Content="Название" FontWeight="Bold" Foreground="Purple" x:Name="nazvanie" Margin="10,10,80,0" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Height="40" VerticalAlignment="Top" FontSize="20"/>
+            <Label Content="Режиссер" x:Name="rezh" Margin="10,50,80,0" Foreground="Purple" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Height="40" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
+            <Label Content="Дирижер" x:Name="dir" Margin="10,90,80,0" Foreground="Purple" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Height="40" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
+            <Label Content="Автор" x:Name="avtor" Margin="10,130,80,0" Foreground="Purple" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Height="40" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
+            <Label Content="Жанр" x:Name="zhanr" Margin="10,170,80,0" Foreground="Purple" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Height="40" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
+            <Label Content="Тип" x:Name="tip" Margin="10,210,80,10" Foreground="Purple" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Height="40" VerticalAlignment="Center" FontWeight="Bold" FontSize="20"/>
+            <Grid x:Name="buttons" Visibility="Visible">
+                <Button Style="{StaticResource BtnRedac}" Background="#FF2C2C2C" Margin="0,0,10,50" VerticalAlignment="Center" Height="38" Width="63" Click="Click_PItm_redact" HorizontalAlignment="Right">
+                    <Image Source="/Image/redac.png" Width="20" Height="20"/>
+                </Button>
+                <Button Style="{StaticResource BtnRedac}" Background="Purple" Margin="0,0,10,-50" VerticalAlignment="Center" Height="40" Width="63" Click="Click_PItm_remove" HorizontalAlignment="Right">
+                    <Image Source="/Image/del.png" Width="20" Height="20"/>
+                </Button>
+            </Grid>
+        </Grid>
+    </Border>
+</UserControl>
