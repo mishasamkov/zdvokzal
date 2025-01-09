@@ -5,10 +5,52 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:zdvokzal.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="Registr">
+        d:DesignHeight="550" d:DesignWidth="800"
+  Title="Registr">
 
-    <Grid>
-        
+    <Grid Background="Gray">
+        <Grid.Resources>
+            <ResourceDictionary Source="/Resource/BtnRes.xaml"/>
+        </Grid.Resources>
+        <Grid Margin="0,0,0,0" VerticalAlignment="Top" Height="60">
+            <Grid.Effect>
+                <DropShadowEffect BlurRadius="31" Direction="260" Color="Gray" ShadowDepth="0"/>
+            </Grid.Effect>
+            <Border CornerRadius="0,0,10,10" Margin="0,0,0,0">
+                <Border.Background>
+                    <SolidColorBrush Color="Purple" Opacity="1.0"/>
+                </Border.Background>
+            </Border>
+            <Image x:Name="img" Source="/Image/logo.png" Margin="20,0,0,0" HorizontalAlignment="Left" Width="45" Height="45" VerticalAlignment="Center" />
+            <Label Content="Железнодорожный вокзал" Foreground="White" FontWeight="Bold" FontSize="25" Margin="80,0,80,0" VerticalAlignment="Center" HorizontalContentAlignment="Left" />
+        </Grid>
+        <Label Content="Регистрация" FontWeight="Bold" FontSize="25" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,85,0,0" Foreground="Purple">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="31" Direction="260" Color="#FFC1C1C1" ShadowDepth="0"/>
+            </Label.Effect>
+        </Label>
+        <Label Content="Логин" FontWeight="Bold" FontSize="10" HorizontalAlignment="Center" VerticalAlignment="Top" Height="24" Foreground="Purple" Width="46" Margin="0,142,155,0"/>
+        <TextBox x:Name="login" Style="{StaticResource BaseBox}" FontSize="25" VerticalContentAlignment="Center"  FontFamily="Note Color Emoji" HorizontalContentAlignment="Center" Height="50" Background="Purple" Foreground="White" Width="200" VerticalAlignment="Top" Margin="0,160,0,0" HorizontalAlignment="Center"/>
+        <Label Content="Пароль" FontWeight="Bold" FontSize="10" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="Purple" Width="50" Margin="0,219,155,0"/>
+        <PasswordBox x:Name="password" Style="{StaticResource BaseBox}" VerticalContentAlignment="Center" FontSize="25" HorizontalContentAlignment="Center" Height="50" Background="Purple" Width="200" Foreground="White" VerticalAlignment="Top" Margin="0,242,0,0" HorizontalAlignment="Center"/>
+        <Label Content="Повторите пароль" FontWeight="Bold" FontSize="10" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="Purple" Width="100" Margin="0,297,108,0"/>
+        <PasswordBox x:Name="password_povt" Style="{StaticResource BaseBox}" VerticalContentAlignment="Center" FontSize="25" HorizontalContentAlignment="Center" Height="50" Background="Purple" Width="200" Foreground="White" VerticalAlignment="Top" Margin="0,320,0,0" HorizontalAlignment="Center"/>
+        <Border Name="Reg" Height="50" Width="200" CornerRadius="5" MouseDown="Click_Registr" Style="{StaticResource Grid Itm_Anim}" Background="Purple" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,310,0,0">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="31" Direction="260" Color="#FFC1C1C1" ShadowDepth="0"/>
+            </Border.Effect>
+            <Grid>
+                <Label Content="Зарегистрироваться" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="19"/>
+            </Grid>
+        </Border>
+        <Border Name="Vhod" Height="50" Width="200" CornerRadius="5" MouseDown="Click_Vhod" Style="{StaticResource Grid Itm_Anim}" Background="Purple" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,450,0,0">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="31" Direction="260" Color="#FFC1C1C1" ShadowDepth="0"/>
+            </Border.Effect>
+            <Grid>
+                <Label Content="Войти" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="19"/>
+            </Grid>
+        </Border>
+        <Frame x:Name="frame_first" Visibility="Hidden" Opacity="0"/>
     </Grid>
 </Page>
