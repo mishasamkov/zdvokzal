@@ -208,5 +208,11 @@
     <Resource Include="Image\people.png" />
     <Resource Include="Image\plus.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClasseModule\ClasseModule.csproj">
+      <Project>{4b591424-9f0e-4303-8db5-dfd5b8cb69b8}</Project>
+      <Name>ClasseModule</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
